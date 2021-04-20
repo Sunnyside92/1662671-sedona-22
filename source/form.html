@@ -47,15 +47,15 @@
               <ul class="name-list">
                 <li class="name-list__item">
                   <label class="name-list__label" for="client-name">Имя*:</label>
-                  <input class="name-list__input" type="text" id="client-name" name="client-name" placeholder="Петр">
+                  <input class="name-list__input" type="text" id="client-name" name="name-item" placeholder="Петр">
                 </li>
                 <li class="name-list__item">
-                  <label class="name-list__label" for="surname-name">Фамилия*:</label>
-                  <input class="name-list__input" type="text" id="client-surname" name="client-surname" placeholder="Иванов">
+                  <label class="name-list__label" for="client-surname">Фамилия*:</label>
+                  <input class="name-list__input" type="text" id="client-surname" name="name-item" placeholder="Иванов">
                 </li>
                 <li class="name-list__item">
-                  <label class="name-list__label" for="patronymic-name">Отчество:</label>
-                  <input class="name-list__input" type="text" id="client-patronymic" name="client-patronymic" placeholder="Александрович">
+                  <label class="name-list__label" for="client-patronymic">Отчество:</label>
+                  <input class="name-list__input" type="text" id="client-patronymic" name="name-item" placeholder="Александрович">
                 </li>
               </ul>
             </fieldset>
@@ -63,12 +63,12 @@
               <legend class="comment-card__name">Контактная информация:</legend>
               <ul class="contact-list">
                 <li class="contact-list__item">
-                  <label class="contact-list__label" class="item-name" for="patronymic-name">Контактный телефон*:</label>
-                  <input class="contact-list__input tel-icon" type="tel" id="client-tel" name="client-tel" placeholder="Введите телефон">
+                  <label class="contact-list__label" for="client-tel">Контактный телефон*:</label>
+                  <input class="contact-list__input tel-icon" type="tel" id="client-tel" name="contact-item" placeholder="Введите телефон">
                 </li>
                 <li class="contact-list__item">
                   <label class="contact-list__label" for="client-email">Электронная почта*:</label>
-                  <input class="contact-list__input email-icon" type="email" id="client-email" name="client-email" placeholder="Введите e-mail">
+                  <input class="contact-list__input email-icon" type="email" id="client-email" name="contact-item" placeholder="Введите e-mail">
                 </li>
               </ul>
             </fieldset>
@@ -76,16 +76,16 @@
               <legend class="comment-card__name">Ваше общее впечатление:</legend>
               <ul class="estimate-list">
                 <li class="estimate-list__item">
-                  <input class="estimate-list__input visually-hidden" type="radio" name="" id="" checked>
-                  <label class="estimate-list__name" for="">Скорее положительное</label>
+                  <input class="estimate-list__input visually-hidden" type="radio" name="estimation" id="good-estimation" checked>
+                  <label class="estimate-list__name" for="good-estimation">Скорее положительное</label>
                 </li>
                 <li class="estimate-list__item">
-                  <input class="estimate-list__input visually-hidden" type="radio" name="" value="" id="">
-                  <label class="estimate-list__name" for="">Скорее отрицательное</label>
+                  <input class="estimate-list__input visually-hidden" type="radio" name="estimation" id="bad-estimation">
+                  <label class="estimate-list__name" for="bad-estimation">Скорее отрицательное</label>
                 </li>
                 <li class="estimate-list__item">
-                  <input class="estimate-list__input visually-hidden" type="radio" name="grid" value="flex" id="filter-flex">
-                  <label class="estimate-list__name" for="filter-flex">Затрудняюсь ответить</label>
+                  <input class="estimate-list__input visually-hidden" type="radio" name="estimation" id="neutral-estimation">
+                  <label class="estimate-list__name" for="neutral-estimation">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
@@ -93,26 +93,26 @@
               <legend class="comment-card__name">Посещенные достопримечательности:</legend>
               <ul class="landmarks-list">
                 <li class="landmarks-list__item">
-                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="" id="" checked>
-                  <label class="landmarks-list__name" for="filter-slider">Мост Дьявола</label>
+                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="landmark" id="landmark1" checked>
+                  <label class="landmarks-list__name" for="landmark1">Мост Дьявола</label>
                 </li>
                 <li class="landmarks-list__item">
-                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="" id="" checked>
-                  <label class="landmarks-list__name" for="filter-slider">Гора-Колокол</label>
+                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="landmark" id="landmark2" checked>
+                  <label class="landmarks-list__name" for="landmark2">Гора-Колокол</label>
                 </li>
                 <li class="landmarks-list__item">
-                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="" id="" checked>
-                  <label class="landmarks-list__name" for="filter-slider">Слайд-парк</label>
+                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="landmark" id="landmark3" checked>
+                  <label class="landmarks-list__name" for="landmark3">Слайд-парк</label>
                 </li>
                 <li class="landmarks-list__item">
-                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="" id="">
-                  <label class="landmarks-list__name" for="filter-slider">Красные скалы</label>
+                  <input class="landmarks-list__input visually-hidden" type="checkbox" name="landmark" id="landmark4">
+                  <label class="landmarks-list__name" for="landmark4">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="comment-card__fieldset">
               <legend class="comment-card__name">Опишите свои эмоции:</legend>
-              <textarea class="comment-card__text" name="" id="" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="comment-card__text" rows="10">Опишите подробно все свои восторги</textarea>
             </fieldset>
             <button class="comment-card__button button" type="submit">Отправить отзыв</button>
           </form>
