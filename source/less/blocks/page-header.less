@@ -1,6 +1,24 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   line-height: 40px;
   color: @special-text;
   font-weight: bold;
+  background-color: @body-background;
+}
+
+.page-header__logo {
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: @tablet-width) {
+    width: 102px;
+    height: 84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 97px;
+  }
 }

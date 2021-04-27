@@ -6,4 +6,19 @@
 
 .features__item {
   padding-left: 52px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__list {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+  }
 }

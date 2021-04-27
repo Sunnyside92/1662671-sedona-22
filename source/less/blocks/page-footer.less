@@ -6,3 +6,16 @@
   color: @text;
   text-decoration: none;
 }
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

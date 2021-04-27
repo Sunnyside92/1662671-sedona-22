@@ -2,6 +2,9 @@
 .main-nav {
   background-color: @blue;
   margin: 0;
+  width: 100%;
+  position: relative;
+  color: @body-background;
 }
 
 .main-nav__toggle {
@@ -9,15 +12,45 @@
   height: 22px;
   background-color: transparent;
   cursor: pointer;
-  background-image: url("../img/icon-cross.svg");
+  background-image: url("../img/icon-menu.svg.svg");
   background-repeat: no-repeat;
   border: 0;
 }
 
-.main-nav__wrapper {
-  margin: 0 auto;
-  padding: 0 20px 0 18px;
-  min-width: 292px;
+.main-nav__list a {
+  color: @body-background;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list a {
+    color: @text;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    background-color: @body-background;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 1200px;
+  }
 }
 
 .main-nav__list {
@@ -26,7 +59,14 @@
   padding: 0;
 }
 
-.main-nav__item a {
-  color: white;
-  text-decoration: none;
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    width: 692px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    width: 1043px;
+  }
 }
