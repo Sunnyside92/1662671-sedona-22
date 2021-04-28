@@ -1,6 +1,32 @@
-.more-advantages {
+.more-advantages__list {
   background-color: @grey;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.more-advantages__item {
+  text-align: center;
+}
+
+
+@media (min-width: @tablet-width) {
+  .more-advantages {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .more-advantages__list {
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more-advantages__list {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+  }
 }
