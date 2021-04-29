@@ -7,15 +7,34 @@
 
 .estimate-list__item {
   margin: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .estimate-list__item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .estimate-list__item {
+    width: 400px;
+  }
 }
 
 .estimate-list__name {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
   color: @text;
-  margin: 0;
-  padding: 0;
-  padding-left: 78px;
+  padding-left: 80px;
+  margin-bottom: 35px;
 }
