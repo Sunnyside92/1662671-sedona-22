@@ -30,9 +30,6 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 768px;
     margin: 0 auto;
   }
 
@@ -61,7 +58,9 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__list {
-    width: 692px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
