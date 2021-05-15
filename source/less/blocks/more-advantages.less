@@ -1,3 +1,9 @@
+.more-advantages {
+  margin: 0;
+  padding: 0;
+  background-color: @grey;
+}
+
 .more-advantages__list {
   background-color: @grey;
   list-style: none;
@@ -7,26 +13,89 @@
 
 .more-advantages__item {
   text-align: center;
+  position: relative;
+  background-color: @grey;
+  padding: 20px 20px 25px;
+  z-index: 5;
 }
 
-
-@media (min-width: @tablet-width) {
-  .more-advantages {
-    grid-column-start: 1;
-    grid-column-end: 3;
+@media (max-width: @mobile-width-only) {
+  .more-advantages__item:first-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 87.5%;
+    height: 1px;
+    background-color: @border;
   }
+
+  .more-advantages__item:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 87.5%;
+    height: 1px;
+    background-color: @border;
+  }
+}
+
+.more-advantages__item .title {
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.more-advantages__item .number {
+  margin: 0 0 15px;
+}
+
+.more-advantages__item .description {
+  margin: 0 0 15px;
+  margin-bottom: 5px;
 }
 
 @media (min-width: @tablet-width) {
   .more-advantages__list {
-    display: grid;
-    grid-template-columns: 256px 256px 256px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+  }
+
+  .more-advantages__item {
+    box-sizing: border-box;
+    width: 33.33%;
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+
+  .more-advantages__item .title {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .more-advantages__item .number {
+    margin-bottom: 20px;
+  }
+
+  .more-advantages__item .description {
+    margin-bottom: 0;
+    margin-top: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .more-advantages__list {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
+  .more-advantages__item {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 35px;
+    padding-bottom: 65px;
+  }
+
+  .more-advantages__item .title {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }

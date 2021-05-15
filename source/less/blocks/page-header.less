@@ -1,24 +1,44 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
   font-size: 18px;
   line-height: 40px;
   color: @special-text;
   font-weight: bold;
   background-color: @body-background;
+
+  @media (min-width: 768px) {
+    position: relative;
+  }
 }
 
 .page-header__logo {
-  width: 102px;
-  height: 84px;
+  min-height: 55px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 102px;
-    height: 84px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 187px;
-    height: 97px;
-  }
+
+.page-header__link {
+  display: block;
+  width: 187px;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-93px);
+  z-index: 10;
+}
+
+.page-header__logo img {
+  width: 187px;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-93px);
 }
