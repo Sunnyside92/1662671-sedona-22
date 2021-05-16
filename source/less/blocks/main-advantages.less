@@ -8,15 +8,17 @@
   background-color: @blue;
   color: @special-text;
   text-align: center;
+  padding: 20px 20px 25px;
+  position: relative;
+  z-index: 5;
 }
 
-.main-advantages__info h3 {
+.main-advantages__info .title {
   color: @special-text;
 }
 
 .main-advantages__image {
-  width: 100%;
-  height: 260px;
+  min-height: 260px;
   margin: 0;
   padding: 0;
 }
@@ -26,8 +28,27 @@
   padding: 0;
 }
 
+.main-advantages__info--city {
+  padding-top: 60px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-advantages__info--city::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg-triangle.svg");
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 37px;
+    background-size: cover;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .main-advantages__wrapper {
+  .main-advantages__item {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,9 +58,25 @@
   .main-advantages__info {
     width: 33%;
     box-sizing: border-box;
+    padding: 25px 32px 20px;
   }
 
   .main-advantages__info--bridge {
     order: 2;
+  }
+
+  .main-advantages__image {
+    width: 67%;
+    max-height: 256px;
+    min-height: 256px;
+    background-color: lightblue; //временно
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-advantages__info {
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

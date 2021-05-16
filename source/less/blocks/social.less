@@ -4,7 +4,46 @@
   padding: 0;
 }
 
+.social__item {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background-color: @blue;
+  color: @special-text;
+  font-size: 0;
+  width: 46px;
+  height: 48px;
+}
+
 .social__link {
-  text-decoration: none;
-  color: @main-text;
+  display: block;
+  text-align: center;
+  background-color: @blue;
+  color: @special-text;
+  font-size: 0;
+  width: 46px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    background-color: @social-hover;
+  }
+
+  &:active {
+    background-color: @social-active;
+    opacity: 0.3;
+  }
+}
+
+.social__link--facebook {
+  background-image: url("../img/icon-facebook.svg.svg");
+}
+
+.social__link--twitter {
+  background-image: url("../img/icon-twitter.svg.svg");
+}
+
+.social__link--youtube {
+  background-image: url("../img/icon-youtube.svg.svg");
 }

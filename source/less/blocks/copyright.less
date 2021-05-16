@@ -1,6 +1,27 @@
+.copyright {
+  padding-top: 30px;
+}
+
 .copyright__text {
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   color: @text;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.copyright__link path:hover {
+  fill: @blue;
+}
+
+.copyright__link path:active {
+  fill: @text;
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 0;
+  }
 }
