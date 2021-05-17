@@ -2,27 +2,72 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
 }
 
 .contact-list__item {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
 }
 
-@media (min-width: @desktop-width) {
-  .contact-list {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+.contact-list__item--email::after,
+.contact-list__item--tel::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  bottom: 21px;
+  right: 0;
+}
+
+.contact-list__item--email::after {
+  background: @input-icon url("../img/mail.svg.svg") no-repeat center;
+}
+
+.contact-list__item--tel::after {
+  background: @input-icon url("../img/phone.svg.svg") no-repeat center;
+}
+
+@media (min-width: @tablet-width) {
+  .contact-list__item--email {
+    margin-bottom: 8px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contact-list__item {
+    display: flex;
     flex-direction: row;
+    align-items: baseline;
+  }
+
+  .contact-list__item--tel {
+    width: 400px;
+  }
+
+  .contact-list__item--email {
+    width: 50%;
+  }
+
+  .contact-list__item--tel span {
+    display: none;
+  }
+
+  .contact-list__item--email::after {
+    right: 5px;
+  }
+
+  .contact-list__item--tel::after {
+    right: 15px;
   }
 }
 
@@ -31,18 +76,50 @@
   font-size: 14px;
   line-height: 26px;
   color: @main-text;
-  padding: 0;
   margin-right: 10px;
-  margin-top: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: @desktop-width) {
+  .contact-list__label {
+    padding-left: 0;
+  }
 }
 
 .contact-list__input {
+  margin: 0;
+  border: 0;
+  padding: 17px;
+  margin-top: 5px;
+  width: 280px;
+  box-sizing: border-box;
+  background: @input;
+  margin-bottom: 20px;
+  line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
-  line-height: 26px;
-  color: @text;
-  background: @input;
-  border: none;
-  padding: 18px 0 14px 22px;
-  margin-bottom: 20px;
+  outline: none;
+
+  &:hover {
+    background-color: @border;
+  }
+
+  &:focus {
+    background-color: @body-background;
+    border: 4px solid @border;
+    padding: 13px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contact-list__input {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact-list__input {
+    width: 300px;
+  }
 }
