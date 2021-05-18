@@ -43,10 +43,19 @@ img {
   background-color: @blue;
   border: none;
   text-transform: uppercase;
-}
 
-.intro {
-  line-height: 24px;
+  &:hover {
+    background-color: @social-hover;
+  }
+
+  &:active {
+    background-color: @social-active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: @border;
+  }
 }
 
 input::-webkit-input-placeholder {

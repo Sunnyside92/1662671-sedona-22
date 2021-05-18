@@ -28,18 +28,35 @@
   margin: 0;
   width: 320px;
   padding: 20px 20px 5px;
+  box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .comment-card__fieldset::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 1px;
+    background-color: @border;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .comment-card__fieldset--name {
     width: 50%;
-    padding: 0;
     padding-left: 40px;
-    box-sizing: border-box;
   }
 
   .comment-card__fieldset--estimate {
     width: 50%;
+    order: -1;
   }
 
   .comment-card__fieldset--contact {
@@ -51,14 +68,14 @@
     width: 100%;
   }
 
-  .comment-card__fieldset--text {
+  .comment-card__fieldset--area {
     width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .comment-card__fieldset--name {
-    padding-left: 60px;
+    padding-left: 80px;
   }
 
   .comment-card__fieldset--contact {
@@ -66,27 +83,153 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .comment-card__fieldset--estimate {
-    order: -1;
-  }
-
-  .comment-card__fieldset {
-    padding: 0;
-  }
-}
-
-.comment-card__name {
+.comment-card__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   color: @text;
-  padding: 0;
   margin: 0 auto 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
-.comment-card__text {
+.comment-card__title--name {
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+}
+
+.comment-card__title--contact {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 65px;
+  }
+}
+
+.comment-card__title--estimate {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+    text-align: left;
+  }
+}
+
+.comment-card__title--landmarks {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    position: relative;
+  }
+}
+
+.comment-card__title--area {
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+    position: relative;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment-card__title--contact::before {
+    .title-border();
+    left: 0;
+  }
+
+  .comment-card__title--contact::after {
+    .title-border();
+    left: 100%;
+    transform: translateX(-120px);
+  }
+
+  .comment-card__title--landmarks::before {
+    .title-border();
+    left: -175px;
+  }
+
+  .comment-card__title--landmarks::after {
+    .title-border();
+    left: 160%;
+    transform: translateX(-120px);
+  }
+
+  .comment-card__title--area::before {
+    .title-border();
+    left: 0;
+  }
+
+  .comment-card__title--area::after {
+    .title-border();
+    left: 100%;
+    transform: translateX(-120px);
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .comment-card__title--contact::before {
+    width: 280px;
+  }
+
+  .comment-card__title--contact::after {
+    width: 280px;
+    left: 100%;
+    transform: translateX(-280px);
+  }
+
+  .comment-card__title--landmarks::before {
+    width: 280px;
+    left: -330px;
+  }
+
+  .comment-card__title--landmarks::after {
+    width: 280px;
+    transform: translateX(-280px);
+    left: 210%;
+  }
+
+  .comment-card__title--area::before {
+    width: 280px;
+  }
+
+  .comment-card__title--area::after {
+    width: 280px;
+    left: 100%;
+    transform: translateX(-280px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment-card::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 1px;
+    height: 300px;
+    background-color: @border-card;
+  }
+}
+
+.comment-card__area {
   background-color: @input;
   color: @text;
   border: none;
@@ -97,21 +240,66 @@
   box-sizing: border-box;
   padding: 20px;
   min-height: 160px;
+  overflow: auto;
+
+  &:hover {
+    background-color: @border;
+  }
+
+  &:focus {
+    background-color: @body-background;
+    border: 4px solid @border;
+    padding: 13px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment-card__bottom {
+    order: 6;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 20px;
+    margin-bottom: 22px;
+  }
 }
 
 .comment-card__button {
-  margin: 51px 0 48px 0;
-  padding: 19px 33px 14px 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 42px 20px 38px;
+  width: 280px;
+  outline: 0;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
   .comment-card__button {
-    width: 100%;
-    padding-right: 20px;
-    margin: 0;
-    margin-bottom: 22px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin-top: 50px;
+    width: 325px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment-card__button {
+    margin-top: 55px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    width: 50%;
+  }
+}
+
+.comment-card__text {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .comment-card__text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 26px;
   }
 }

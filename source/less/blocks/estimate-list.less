@@ -1,13 +1,10 @@
 .estimate-list {
   list-style: none;
   margin: 0;
-  padding: 20px 0 28px 0;
-  line-height: 43px;
+  padding: 0;
 }
 
 .estimate-list__item {
-  margin: 0;
-  overflow: visible;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,6 +12,7 @@
   margin-bottom: 13px;
   width: 280px;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,4 +35,44 @@
   color: @text;
   padding-left: 80px;
   margin-bottom: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+.estimate-list__input + label::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  background-color: @input;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.estimate-list__input:hover + label::before {
+  background-color: @border;
+}
+
+.estimate-list__input:active + label::before,
+.estimate-list__input:focus + label::before {
+  background-color: @border-focus;
+}
+
+.estimate-list__input:checked + label::before {
+  background-color: @main-text;
+  border: 16px solid @input;
+  box-sizing: border-box;
+}
+
+.estimate-list__input:checked:hover + label::before {
+  background-color: @main-text;
+  border: 16px solid @border;
+}
+
+.estimate-list__input:checked:focus + label::before,
+.estimate-list__input:checked:active + label::before {
+  background-color: @main-text;
+  border: 16px solid @border-focus;
 }
