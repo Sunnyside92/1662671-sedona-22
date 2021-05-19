@@ -8,6 +8,7 @@
     margin-right: 60px;
     margin-left: 60px;
     margin-top: 20px;
+    position: relative;
   }
 }
 
@@ -20,7 +21,6 @@
 }
 
 .video__tools {
-  position: relative;
   margin: 0 20px;
   padding-left: 25px;
   padding-right: 25px;
@@ -31,41 +31,114 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .video__tools {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 92px;
+    padding-left: 35px;
+    padding-right: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .video__replay {
   width: 16px;
   height: 20px;
+  order: 0;
+  outline: 0;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
+
 .video__slider {
-  width: 280px;
-  height: 45px;
-  background-color: @slider;
   position: absolute;
   top: -45px;
   left: 0;
+  width: 280px;
+  height: 45px;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
   padding-top: 22px;
   padding-left: 22px;
 }
 
+@media (min-width: @tablet-width) {
+  .video__slider {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding-left: 40px;
+  }
+}
+
 .video__bar {
-  position: absolute;
   width: 235px;
   height: 3px;
-  background-color: @body-background;
-  top: 22px;
-  left: 22px;
-  opacity: 0.2;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .video__bar {
+    width: 390px;
+  }
 }
 
 .video__pull {
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  left: 76px;
   background-color: @body-background;
-  top: 18px;
   border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 19px;
+  left: 20%;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .video__pull {
+    top: 50%;
+    left: 32%;
+    transform: translateY(-4px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__pull {
+    left: 25%;
+  }
+}
+
+.video__sub {
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 22px;
+  height: 20px;
+  margin-left: auto;
+}
+
+.video__full {
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
 }
