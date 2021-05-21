@@ -15,12 +15,11 @@
 
 .main-advantages__info .title {
   color: @special-text;
+  margin-bottom: 7px;
 }
 
 .main-advantages__image {
   min-height: 260px;
-  margin: 0;
-  padding: 0;
 }
 
 .main-advantages__item {
@@ -30,6 +29,14 @@
 
 .main-advantages__info--city {
   padding-top: 60px;
+}
+
+.main-advantages__info .number {
+  margin: 0 0 15px;
+}
+
+.main-advantages__info .description {
+  margin: 0 0 15px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -70,6 +77,19 @@
     max-height: 256px;
     min-height: 256px;
   }
+
+  .main-advantages__image img {
+    width: 100%;
+    height: 256px;
+  }
+
+  .main-advantages__info .number {
+    margin-bottom: 25px;
+  }
+
+  .main-advantages__info .description {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -77,5 +97,10 @@
     padding-top: 30px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .main-advantages__info .title {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
