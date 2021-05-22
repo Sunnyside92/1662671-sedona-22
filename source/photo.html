@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
   </head>
   <body class="page__body">
     <div class="wrapper-main">
@@ -28,8 +31,11 @@
           </ul>
         </nav>
         <div class="page-header__logo">
-          <a class="page-header__link" href="index.html" aria-label="Вернуться на главную">
-            <img src="img/logotype-mobile-tablet.svg.svg" width="102" height="84" alt="Информационный сайт для туристов «Седона»">
+          <a class="page-header__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg.svg">
+              <img src="img/logotype-mobile-tablet.svg.svg" width="102" height="84" alt="Информационный сайт для туристов «Седона»">
+            </picture>
           </a>
         </div>
       </header>
@@ -46,7 +52,11 @@
           <ul class="photo__block">
             <li class="photo__item photo__item--large">
               <a href="#">
-                <img src="img/photo-1-mobile.jpg.jpg" alt="Photo-1">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                  <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"alt="Photo-1">
+                </picture>
               </a>
               <div class="photo__comment">
                 <p class="photo__name">Народные просторы</p>
@@ -56,7 +66,11 @@
             </li>
             <li class="photo__item">
               <a href="#">
-                <img src="img/photo-2-mobile.jpg.jpg" alt="Photo-2">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                  <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"alt="Photo-2">
+                </picture>
               </a>
               <div class="photo__comment">
                 <p class="photo__name">Местная растительность</p>
@@ -66,7 +80,11 @@
             </li>
             <li class="photo__item">
               <a href="#">
-                <img src="img/photo-3-mobile.jpg.jpg" alt="Photo-3">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                  <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"alt="Photo-3">
+                </picture>
               </a>
               <div class="photo__comment">
                 <p class="photo__name">Дорога на север</p>
@@ -76,7 +94,11 @@
             </li>
             <li class="photo__item">
               <a href="#">
-                <img src="img/photo-4-mobile.jpg.jpg" alt="Photo-4">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                  <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x"alt="Photo-4">
+                </picture>
               </a>
               <div class="photo__comment">
                 <p class="photo__name">Мост дьявола</p>
@@ -92,7 +114,13 @@
         </section>
         <section class="video">
           <h2 class="visually-hidden">Видеообзор</h2>
-          <img class="video__img" src="img/video-mobile.jpg.jpg" alt="Video">
+          <div class="video__img">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"alt="Video">
+            </picture>
+          </div>
           <div class="video__tools">
             <button class="video__replay tools">
               <svg width="16" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4V0L3 5l5 5V6c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6H0c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8z" fill="#5C6870"/></svg>
