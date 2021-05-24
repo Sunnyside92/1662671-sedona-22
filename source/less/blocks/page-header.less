@@ -5,13 +5,13 @@
   font-weight: bold;
   background-color: @body-background;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     position: relative;
   }
 }
 
 .page-header__logo {
-  min-height: 55px;
+  min-height: 52px;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -22,7 +22,6 @@
   }
 }
 
-
 .page-header__link {
   display: block;
   width: 187px;
@@ -32,13 +31,4 @@
   left: 50%;
   transform: translateX(-93px);
   z-index: 10;
-}
-
-.page-header__logo img {
-  width: 187px;
-  height: 97px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-93px);
 }

@@ -1,0 +1,139 @@
+.modal {
+  background-color: @body-background;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  min-height: 280px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  z-index: 20;
+
+  @media (min-width: @tablet-width) {
+    width: 52.08%;
+    min-height: 347px;
+    bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.33%;
+    bottom: 100px;
+  }
+}
+
+.modal__text {
+  width: 237px;
+  margin: 0 auto;
+  padding-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 307px;
+    padding-top: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 49px;
+  }
+}
+
+.modal__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: @text;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 26px;
+  }
+}
+
+.modal__subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: @main-text;
+}
+
+.modal__close {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 35px;
+  margin-top: 22px;
+  padding: 18px 65px 14px 65px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 49px;
+    margin-top: 26px;
+    padding: 18px 108px 14px 108px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+  }
+}
+
+.modal--failure {
+  display: none;
+}
+
+.modal--success {
+  display: none;
+  min-height: 323px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 347px;
+    width: 83.33%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 53.33%;
+  }
+}
+
+.modal--success .modal__close {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 18px 62px 14px 60px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 18px 140px 14px 139px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.modal--success .modal__button {
+  padding: 20px;
+  background-color: @input;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 91px;
+  }
+}
+
+.modal--success .modal__text {
+  width: 244px;
+  margin: 0 auto;
+  padding-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 444px;
+    padding-top: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 52px;
+  }
+}

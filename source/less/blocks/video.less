@@ -142,3 +142,32 @@
   height: 20px;
   margin-left: 40px;
 }
+
+
+.video__tool {
+  color: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    color: #ffffff;
+  }
+}
+
+.video__tool:hover {
+  color: #333333;
+
+  @media (min-width: @tablet-width) {
+    color: #ffffff;
+    opacity: 0.6;
+  }
+}
+
+.video__tool:active,
+.video__tool:focus {
+  color: #333333;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    color: #ffffff;
+    opacity: 0.3;
+  }
+}
